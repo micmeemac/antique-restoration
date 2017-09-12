@@ -1,0 +1,64 @@
+# Site + SEO Settings
+title: Antique Restoration
+email:
+description: Antique Restoration | Cape Town | Professional Restoration Specialist
+baseurl: ""
+url: "https://coordinator-murphy-82485.netlify.com"
+logo: #url here
+google_site_verification: #webmaster
+lang: en_GB
+
+# Social Media
+twitter:
+  username:
+facebook:
+  app_id:
+  publisher:
+  admins:
+social:
+  name: #when different from Site
+  links: #Array of social links
+    - https://www.facebook.com/Hugh-and-Verna-Lane-Antique-Furniture-Restoration-192220094235376/
+
+
+# Asset Pipeline
+assets:
+  cdn: #cdn url here
+  assets:
+    - "*.png"
+    - "*.jpg"
+
+# Default Behaviour
+defaults:
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "_pages"
+    values:
+      layout: "page"
+
+
+# Collections
+collections:
+  foo:
+    output: true
+
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Gem Settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-assets
+  - jekyll-feed
+  - jekyll-sitemap
