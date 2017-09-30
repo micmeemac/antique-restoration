@@ -71,7 +71,7 @@
 
 	body, input, select, textarea {
 		color: _palette(fg);
-		font-family: 'Lato', sans-serif;
+		font-family: 'Roboto Slab', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
@@ -125,12 +125,17 @@
 		font-size: 0.8em;
 		position: relative;
 		top: 0.5em;
+		padding-top: 0.5em;
 	}
 
 	sup {
 		font-size: 0.8em;
 		position: relative;
 		top: -0.5em;
+	}
+
+	cite {
+		text-align: right;
 	}
 
 	hr {
@@ -143,6 +148,7 @@
 		border-left: solid 0.5em _palette(border);
 		font-style: italic;
 		padding: 1em 0 1em 2em;
+		text-align: left;
 	}
 
 /* Section/Article */
@@ -1160,6 +1166,9 @@
 
 		/* Basic */
 
+			.image-size {
+				width: 380px;
+			}
 			html, body {
 				overflow-x: hidden;
 			}
@@ -1420,6 +1429,10 @@
 		$pattern-background-size: 10em;
 
 		/* Basic */
+
+		.image-size {
+			width: 340px;
+		}
 
 			body {
 				min-width: 320px;
