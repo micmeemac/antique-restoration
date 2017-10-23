@@ -58,6 +58,66 @@
 
 /* Basic */
 
+/* Style the buttons that are used to open and close the accordion panel */
+button.fakeAccordian{
+	background-color: #eee;
+	color: #444;
+	font-size: 0.8em;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	margin: 0;
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+		font-size: 0.8em;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+		margin: 0;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+		color: #444;
+		margin: 0;
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+		h3 {
+			font-size: 0.6em;
+			padding: 1em;
+			margin-bottom: 0;
+		}
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 	body {
 		background: _palette(bg);
 
@@ -166,28 +226,20 @@
 
 		&.special {
 			margin-bottom: 5em;
-			padding-top: 7em;
+			padding-top: 3em;
 			position: relative;
 			text-align: center;
 
 			&:before,
 			&:after {
-				border-bottom: solid 1.5px;
-				border-top: solid 1.5px;
-				content: '';
-				height: 7px;
-				opacity: 0.1;
-				position: absolute;
-				top: 1.75em;
-				width: 43%;
 			}
 
 			&:before {
-				left: 0;
+
 			}
 
 			&:after {
-				right: 0;
+
 			}
 
 			h2 {
@@ -341,6 +393,15 @@
 			}
 
 			&.fa-twitter {
+				background: _palette(twitter, bg);
+				color: _palette(twitter, fg);
+
+				&:hover {
+					background: lighten(_palette(twitter, bg), 4);
+				}
+			}
+
+			&.fa-instagram {
 				background: _palette(twitter, bg);
 				color: _palette(twitter, fg);
 
@@ -901,7 +962,7 @@
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: $pattern-background-size;
-		padding: 7em 0;
+		padding: 3em 0;
 
 		> :last-child {
 			margin-bottom: 0;
@@ -923,7 +984,7 @@
 	}
 
 	body.index #main {
-		padding-top: 5em;
+		padding-top: 1em;
 	}
 
 /* CTA */
@@ -975,11 +1036,45 @@
 		}
 	}
 
+	.split {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+		max-width: 1200px;
+		margin: auto;
+		.left {
+			width: 40%;
+			text-transform: uppercase;
+		}
+		.right {
+			max-height: 680px;
+			width: 400px;
+		}
+	}
+
 /* Wide */
 
 	@include breakpoint(wide) {
 
 		/* Basic */
+
+		.split {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			align-content: center;
+			max-width: 1200px;
+			.left {
+				width: 40%;
+				text-transform: uppercase;
+			}
+			.right {
+				max-height: 760px;
+			}
+		}
 
 			body, input, select, textarea {
 				font-size: 14pt;
@@ -989,7 +1084,7 @@
 
 			header {
 				&.special {
-					padding-top: 5.5em;
+					padding-top: 2.5em;
 					margin-bottom: 4em;
 				}
 			}
@@ -1001,6 +1096,23 @@
 	@include breakpoint(normal) {
 
 		/* Basic */
+
+		.split {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			align-content: center;
+			max-width: 1200px;
+			.left {
+				width: 40%;
+				text-transform: uppercase;
+			}
+			.right {
+				max-height: 760px;
+				width: 40%;
+			}
+		}
 
 			body, input, select, textarea {
 				font-size: 13pt;
@@ -1088,10 +1200,10 @@
 
 		/* Section/Article */
 
+
+
 			header {
-				br {
-					display: none;
-				}
+
 
 				&.major {
 					padding-bottom: 1em;
@@ -1180,11 +1292,11 @@
 
 				&.special {
 					margin-bottom: 4em;
-					padding-top: 5em;
+					padding-top: 3em;
 
 					&:before,
 					&:after {
-						width: 40%;
+						display: none;
 					}
 
 					h2 + p {
@@ -1194,6 +1306,8 @@
 			}
 
 		/* Section/Article */
+
+
 
 			section {
 				margin: 1em 0 1em 0;
@@ -1273,7 +1387,7 @@
 		/* Main */
 
 			#main {
-				padding: 5em 0;
+				padding: 1em 0;
 
 				.sidebar {
 					border-top: solid 1px transparentize(_palette(fg), 0.9);
@@ -1287,7 +1401,7 @@
 			}
 
 			body.index #main {
-				padding-top: 4.5em;
+				padding-top: 1em;
 			}
 
 		/* CTA */
@@ -1379,6 +1493,7 @@
 				padding: 0.25em 0.75em 1em 0.75em;
 
 				.link {
+					overflow: hidden;
 					border: 0;
 					border-top: solid 1px transparentize(_palette(navPanel, fg), 0.95);
 					color: inherit;
@@ -1428,6 +1543,19 @@
 
 		$pattern-background-size: 10em;
 
+		.split {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.left {
+				width: 80%;
+			}
+			.right {
+				max-height: 30%;
+				width: 80%;
+			}
+		}
+
 		/* Basic */
 
 		.image-size {
@@ -1468,7 +1596,7 @@
 
 					&:before,
 					&:after {
-						width: 38%;
+						display: none;
 					}
 
 					.icon {
@@ -1539,9 +1667,6 @@
 				padding: 2.25em 1.5em;
 
 				&.special {
-					br {
-						display: none;
-					}
 				}
 
 				&.style1 {
@@ -1594,7 +1719,7 @@
 			}
 
 			body.index #main {
-				padding: 2.5em 0 0 0;
+				padding: 1.5em 0 0 0;
 			}
 
 			body.contact #main {

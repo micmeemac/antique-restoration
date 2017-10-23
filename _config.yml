@@ -27,6 +27,7 @@ assets:
   assets:
     - "*.png"
     - "*.jpg"
+    - "*.JPG"
 
 # Default Behaviour
 defaults:
