@@ -26,6 +26,7 @@ assets:
   cdn: #cdn url here
   assets:
     - "*.png"
+    - "*.PNG"
     - "*.jpg"
     - "*.JPG"
 
