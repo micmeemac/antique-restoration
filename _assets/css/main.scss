@@ -58,6 +58,17 @@
 
 /* Basic */
 
+// gallery displays images of max height in wrapping order
+.sorted-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	img {
+		height: 300px;
+		padding-bottom: 15px;
+	}
+}
+
 /* Style the buttons that are used to open and close the accordion panel */
 button.fakeAccordian{
 	background-color: #eee;
@@ -870,21 +881,21 @@ button.accordion.active:after {
 	}
 
 	.background1 {
-		background: url(asset_path('test5.jpg'));
+		background: url(asset_path('hero0.jpg'));
 		background-size: cover;
 		background-position: center top;
 		background-repeat: no-repeat;
 	}
 
 	.background2 {
-		background: url(asset_path('test6.jpg'));
+		background: url(asset_path('hero1.jpg'));
 		background-size: cover;
 		background-position: top;
 		background-repeat: no-repeat;
 	}
 
 	.background3 {
-		background: url(asset_path('test7.jpg'));
+		background: url(asset_path('hero2.jpg'));
 		background-size: cover;
 		background-position: top;
 		background-repeat: no-repeat;
@@ -1060,6 +1071,17 @@ button.accordion.active:after {
 
 		/* Basic */
 
+		.sorted-gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			img {
+				max-height: 240px;
+				padding-right: 22px;
+				padding-bottom: 10px;
+			}
+		}
+
 		.split {
 			display: flex;
 			flex-direction: row;
@@ -1096,6 +1118,17 @@ button.accordion.active:after {
 	@include breakpoint(normal) {
 
 		/* Basic */
+
+		.sorted-gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			img {
+				max-height: 200px;
+				padding-right: 25px;
+				padding-bottom: 15px;
+			}
+		}
 
 		.split {
 			display: flex;
@@ -1191,6 +1224,17 @@ button.accordion.active:after {
 		$pattern-background-size: 15em;
 
 		/* Basic */
+
+		.sorted-gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			img {
+				max-height: 150px;
+				padding-right: 15px;
+				padding-bottom: 10px;
+			}
+		}
 
 			body, input, select, textarea {
 				font-size: 13pt;
@@ -1540,6 +1584,20 @@ button.accordion.active:after {
 /* Mobile */
 
 	@include breakpoint(mobile) {
+
+		.sorted-gallery {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			img {
+				max-height: none;
+				height: 100%;
+				width: 90vw;
+				padding-right: 0px;
+				padding-bottom: 15px;
+			}
+		}
 
 		$pattern-background-size: 10em;
 
