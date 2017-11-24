@@ -33,11 +33,28 @@ $(document).ready(function () {
 
 	var swiper = new Swiper('.swiper-container2', {
 			pagination: '.swiper-pagination2',
-			slidesPerView: 3,
+			slidesPerView: 4,
 			paginationClickable: true,
-			spaceBetween: 10,
+			spaceBetween: 30,
 			freeMode: true,
-			grabCursor: true
+			grabCursor: true,
+			breakpoints: {
+				// when window width is <= 320px
+				380: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				},
+				// when window width is <= 480px
+				780: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				// when window width is <= 640px
+				1500: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				}
+			}
 	})
 
 	var swiperGallery = new Swiper('.swiper-container3', {

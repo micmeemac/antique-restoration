@@ -69,6 +69,17 @@
 	}
 }
 
+.image-size {
+	display: none;
+}
+
+.logo {
+	padding-top: 2px;
+	height: auto;
+	width: auto;
+	max-height: 50px;
+}
+
 /* Style the buttons that are used to open and close the accordion panel */
 button.fakeAccordian{
 	background-color: #eee;
@@ -130,7 +141,7 @@ button.accordion.active:after {
 }
 
 	body {
-		background: _palette(bg);
+		background: white;
 
 		&.is-loading {
 			*, *:before, *:after {
@@ -153,7 +164,7 @@ button.accordion.active:after {
 		@include vendor('transition', ('color 0.2s ease-in-out', 'border-color 0.2s ease-in-out', 'background-color 0.2s ease-in-out'));
 		color: darken(_palette(one, bg), 20);
 		text-decoration: none;
-		border-bottom: dotted 1px;
+		// border-bottom: dotted 1px;
 
 		&:hover {
 			border-bottom-color: transparent;
@@ -169,11 +180,13 @@ button.accordion.active:after {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: inherit;
+		// color: inherit;
 		font-weight: 300;
 		line-height: 1.75em;
 		margin-bottom: 1em;
 		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		color: black;
 
 		a {
 			color: inherit;
@@ -211,7 +224,6 @@ button.accordion.active:after {
 
 	hr {
 		border-top: solid 1px _palette(border);
-		border: 0;
 		margin-bottom: 1.5em;
 	}
 
@@ -618,7 +630,7 @@ button.accordion.active:after {
 		font-size: 0.8em;
 		font-weight: 900;
 		letter-spacing: 2px;
-		min-width: 18em;
+		min-width: 15.5em;
 		padding: 0 0.75em;
 		line-height: 3.75em;
 		text-align: center;
@@ -714,10 +726,11 @@ button.accordion.active:after {
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
-		padding: 1em 1.5em;
+		//padding: 1em 1.5em;
 		position: fixed;
 		top: 0;
 		width: 100%;
+		height: 51.5px;
 		z-index: 10000;
 
 		h1 {
@@ -734,7 +747,7 @@ button.accordion.active:after {
 			position: absolute;
 			right: 1.5em;
 			text-transform: uppercase;
-			top: 0.75em;
+			top: 0.5em;
 
 			ul {
 				li {
@@ -746,6 +759,7 @@ button.accordion.active:after {
 					}
 
 					a {
+						font-family: 'Montserrat', sans-serif;
 						border: solid 1px transparent;
 						color: inherit;
 						display: inline-block;
@@ -800,12 +814,12 @@ button.accordion.active:after {
 			background: _palette(header, alt-bg);
 			box-shadow: none;
 			color: _palette(header, alt-fg);
-			padding: 1.2em;
+			//padding: 1.2em;
 			position: absolute;
 
 			nav {
 				right: 2.5em;
-				top: 0.82em;
+				top: 0.5em;
 
 				ul {
 					li {
@@ -902,6 +916,7 @@ button.accordion.active:after {
 	}
 
 	#banner {
+		font-size: 25px;
 		height: 100vh;
 		margin: 0;
 		padding: 0;
@@ -925,7 +940,7 @@ button.accordion.active:after {
 			color: _palette(banner, inner-fg);
 			display: inline-block;
 			opacity: 0;
-			padding: 3em;
+			padding: 1.8em;
 			text-align: center;
 
 
@@ -995,6 +1010,7 @@ button.accordion.active:after {
 	}
 
 	body.index #main {
+		background: white;
 		padding-top: 1em;
 	}
 
@@ -1003,7 +1019,7 @@ button.accordion.active:after {
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: _palette(three, bg);
-		background-image: url(asset_path('light-tl.svg')), url(asset_path('light-tr.svg')), url(asset_path('overlay.png')), url(asset_path('banner.jpg'));
+		//background-image: url(asset_path('light-tl.svg')), url(asset_path('light-tr.svg')), url(asset_path('overlay.png')), url(asset_path('banner.jpg'));
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: $pattern-background-size, $pattern-background-size, auto, cover;
@@ -1053,14 +1069,21 @@ button.accordion.active:after {
 		justify-content: space-around;
 		align-items: center;
 		align-content: center;
-		max-width: 1200px;
+		max-width: 80%;
 		margin: auto;
 		.left {
-			width: 40%;
+			background: antiquewhite;
+			// width: 40%;
+			margin: 2em;
 			text-transform: uppercase;
+			max-height: 430px;
+			padding-left: 1.5em;
+			padding-right: 1.5em;
+			padding-top: 1.5em;
+			padding-bottom: 0.5em;
 		}
 		.right {
-			max-height: 680px;
+			max-height: 430px;
 			width: 400px;
 		}
 	}
@@ -1090,11 +1113,11 @@ button.accordion.active:after {
 			align-content: center;
 			max-width: 1200px;
 			.left {
-				width: 40%;
+				margin: 2em;
 				text-transform: uppercase;
 			}
 			.right {
-				max-height: 760px;
+				max-height: 460px;
 			}
 		}
 
@@ -1118,6 +1141,38 @@ button.accordion.active:after {
 	@include breakpoint(normal) {
 
 		/* Basic */
+		.swiper-container2 {
+		  width: 100%;
+		  height: 100%;
+		  margin: 20px auto;
+		  overflow-x: hidden;
+
+		  .swiper-slide {
+		    text-align: center;
+		    font-size: 18px;
+		    background: #fff;
+		    /* Center slide text vertically */
+		    display: -webkit-box;
+		    display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    flex-direction: column;
+		    -webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		    -webkit-justify-content: center;
+		    justify-content: center;
+		    -webkit-box-align: center;
+		    -ms-flex-align: center;
+		    -webkit-align-items: center;
+		    align-items: center;
+
+		    img {
+		      width: 100%;
+		      height: 100%;;
+		      max-height: 350px;
+		    }
+		  }
+		}
 
 		.sorted-gallery {
 			display: flex;
@@ -1138,12 +1193,12 @@ button.accordion.active:after {
 			align-content: center;
 			max-width: 1200px;
 			.left {
-				width: 40%;
+				max-height: none;
+				margin: 2em;
 				text-transform: uppercase;
 			}
 			.right {
-				max-height: 760px;
-				width: 40%;
+				max-height: 471px;
 			}
 		}
 
@@ -1224,6 +1279,10 @@ button.accordion.active:after {
 		$pattern-background-size: 15em;
 
 		/* Basic */
+
+		.logo {
+			display: none;
+		}
 
 		.sorted-gallery {
 			display: flex;
@@ -1323,6 +1382,7 @@ button.accordion.active:after {
 		/* Basic */
 
 			.image-size {
+				display: inline;
 				width: 380px;
 			}
 			html, body {
@@ -1772,7 +1832,7 @@ button.accordion.active:after {
 		/* Main */
 
 			#main {
-				background-size: $pattern-background-size;
+				//background-size: $pattern-background-size;
 				padding: 3.5em 0 2.5em 0;
 			}
 
