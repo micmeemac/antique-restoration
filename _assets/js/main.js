@@ -32,12 +32,18 @@ $(document).ready(function () {
 	})
 
 	var swiper = new Swiper('.swiper-container2', {
-			pagination: '.swiper-pagination2',
 			slidesPerView: 4,
 			paginationClickable: true,
 			spaceBetween: 30,
 			freeMode: true,
 			grabCursor: true,
+			// If we need pagination
+			pagination: '.swiper-pagination2',
+
+			// Navigation arrows
+			nextButton: '.swiper-button-next2',
+			prevButton: '.swiper-button-prev2',
+
 			breakpoints: {
 				// when window width is <= 320px
 				380: {
@@ -57,13 +63,36 @@ $(document).ready(function () {
 			}
 	})
 
-	var swiperGallery = new Swiper('.swiper-container3', {
-			pagination: '.swiper-pagination3',
-			slidesPerView: 1,
+	var swiper3 = new Swiper('.swiper-container3', {
+			slidesPerView: 4,
 			paginationClickable: true,
-			spaceBetween: 0,
-			autoplay: 3000,
-			loop: true
+			spaceBetween: 30,
+			freeMode: true,
+			grabCursor: true,
+			// If we need pagination
+			pagination: '.swiper-pagination3',
+
+			// Navigation arrows
+			nextButton: '.swiper-button-next3',
+			prevButton: '.swiper-button-prev3',
+
+			breakpoints: {
+				// when window width is <= 320px
+				380: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				},
+				// when window width is <= 480px
+				780: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				// when window width is <= 640px
+				1500: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				}
+			}
 	})
 
 });

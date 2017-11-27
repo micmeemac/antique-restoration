@@ -185,7 +185,7 @@ button.accordion.active:after {
 		line-height: 1.75em;
 		margin-bottom: 1em;
 		text-transform: uppercase;
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Montserrat';
 		color: black;
 
 		a {
@@ -759,7 +759,7 @@ button.accordion.active:after {
 					}
 
 					a {
-						font-family: 'Montserrat', sans-serif;
+						font-family: 'Montserrat';
 						border: solid 1px transparent;
 						color: inherit;
 						display: inline-block;
@@ -1100,7 +1100,7 @@ button.accordion.active:after {
 			flex-wrap: wrap;
 			justify-content: flex-start;
 			img {
-				max-height: 240px;
+				max-height: 280px;
 				padding-right: 22px;
 				padding-bottom: 10px;
 			}
@@ -1112,7 +1112,7 @@ button.accordion.active:after {
 			justify-content: space-around;
 			align-items: center;
 			align-content: center;
-			max-width: 90%;
+			max-width: 98%;
 			.left {
 				overflow-y: scroll;
 				height: 480px;
@@ -1180,7 +1180,7 @@ button.accordion.active:after {
 			flex-wrap: wrap;
 			justify-content: flex-start;
 			img {
-				max-height: 200px;
+				max-height: 260px;
 				padding-right: 25px;
 				padding-bottom: 15px;
 			}
@@ -1292,7 +1292,7 @@ button.accordion.active:after {
 			flex-wrap: wrap;
 			justify-content: flex-start;
 			img {
-				max-height: 150px;
+				max-height: 240px;
 				padding-right: 15px;
 				padding-bottom: 10px;
 			}
@@ -1649,15 +1649,11 @@ button.accordion.active:after {
 	@include breakpoint(mobile) {
 
 		.sorted-gallery {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-			justify-content: center;
+			display: block;
 			img {
 				max-height: none;
 				height: 100%;
 				width: 90vw;
-				padding-right: 0px;
 				padding-bottom: 15px;
 			}
 		}
@@ -1675,7 +1671,7 @@ button.accordion.active:after {
 			}
 			.right {
 				max-height: none;
-				max-width: 90%;
+				max-width: 98%;
 			}
 		}
 
