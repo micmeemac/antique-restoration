@@ -1074,17 +1074,18 @@ button.accordion.active:after {
 		.left {
 			background: antiquewhite;
 			// width: 40%;
-			margin: 2em;
+			margin-left: 2em;
+			margin-right: 2em;
 			text-transform: uppercase;
-			max-height: 430px;
+			height: 480px;
 			padding-left: 1.5em;
 			padding-right: 1.5em;
 			padding-top: 1.5em;
 			padding-bottom: 0.5em;
 		}
 		.right {
-			max-height: 430px;
-			width: 400px;
+			max-height: 480px;
+			//width: 400px;
 		}
 	}
 
@@ -1111,13 +1112,13 @@ button.accordion.active:after {
 			justify-content: space-around;
 			align-items: center;
 			align-content: center;
-			max-width: 1200px;
+			max-width: 90%;
 			.left {
-				margin: 2em;
-				text-transform: uppercase;
+				overflow-y: scroll;
+				height: 480px;
 			}
 			.right {
-				max-height: 460px;
+				max-height: 480px;
 			}
 		}
 
@@ -1175,7 +1176,7 @@ button.accordion.active:after {
 		}
 
 		.sorted-gallery {
-			display: flex;
+			display: inline-flex;
 			flex-wrap: wrap;
 			justify-content: flex-start;
 			img {
@@ -1191,14 +1192,16 @@ button.accordion.active:after {
 			justify-content: space-around;
 			align-items: center;
 			align-content: center;
-			max-width: 1200px;
+			// max-width: 1200px;
 			.left {
-				max-height: none;
-				margin: 2em;
+				max-height: 460px;
+				overflow-y: scroll;
+				margin-left: 2em;
+				margin-right: 2em;
 				text-transform: uppercase;
 			}
 			.right {
-				max-height: 471px;
+				max-height: 460px;
 			}
 		}
 
@@ -1666,11 +1669,13 @@ button.accordion.active:after {
 			flex-direction: column;
 			justify-content: center;
 			.left {
-				width: 80%;
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 2em;
 			}
 			.right {
-				max-height: 30%;
-				width: 80%;
+				max-height: none;
+				max-width: 90%;
 			}
 		}
 
