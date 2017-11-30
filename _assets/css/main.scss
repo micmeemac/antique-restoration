@@ -1649,11 +1649,15 @@ button.accordion.active:after {
 	@include breakpoint(mobile) {
 
 		.sorted-gallery {
-			display: block;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			margin:auto;
 			img {
 				max-height: none;
-				height: 100%;
-				width: 90vw;
+				//height: 100%;
+				margin:auto;
+				max-width: 90vw;
 				padding-bottom: 15px;
 			}
 		}
