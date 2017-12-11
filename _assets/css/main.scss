@@ -20,7 +20,8 @@
 		normal: '(max-width: 1280px)',
 		narrow: '(max-width: 980px)',
 		narrower: '(max-width: 840px)',
-		mobile: '(max-width: 736px)'
+		mobile: '(max-width: 736px)',
+		smallest: '(max-width: 340px)'
 	));
 
 	@include skel-layout((
@@ -49,6 +50,9 @@
 				containers: (95%, true),
 			),
 			mobile: (
+				containers: (100%, true),
+			),
+			smallest: (
 				containers: (100%, true),
 			)
 		)
@@ -1474,7 +1478,7 @@ button.accordion.active:after {
 			#banner {
 				background-attachment: scroll, scroll, scroll, fixed;
 				background-color: _palette(three, bg);
-				background-image: url(asset_path('overlay.png')), url(asset_path('banner.jpg'));
+				background-image: url(asset_path('overlay.png'));
 				background-size: 100% 100%;
 				margin: 0;
 			}
@@ -1817,6 +1821,7 @@ button.accordion.active:after {
 					background: none;
 					display: block;
 					padding: 0 1.5em;
+					max-width: 96vw;
 
 					header {
 						h2 {
@@ -1891,5 +1896,17 @@ button.accordion.active:after {
 					}
 				}
 			}
+
+	}
+
+	@include breakpoint(smallest) {
+
+		.image-size {
+			width: 300px;
+		}
+		.button {
+			min-width: none;
+			padding: 0 0 0.4em;
+		}
 
 	}
