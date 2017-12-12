@@ -21,7 +21,7 @@
 		narrow: '(max-width: 980px)',
 		narrower: '(max-width: 840px)',
 		mobile: '(max-width: 736px)',
-		smallest: '(max-width: 340px)'
+		smallest: '(max-width: 400px)'
 	));
 
 	@include skel-layout((
@@ -1821,7 +1821,6 @@ button.accordion.active:after {
 					background: none;
 					display: block;
 					padding: 0 1.5em;
-					max-width: 96vw;
 
 					header {
 						h2 {
@@ -1900,13 +1899,35 @@ button.accordion.active:after {
 	}
 
 	@include breakpoint(smallest) {
+		body {
+			min-width: 300px;
+		}
+		#banner .inner {
+			padding: 0;
+		}
+		#banner .inner footer{
+			margin: auto;
+			margin-top: 1em;
+		}
 
 		.image-size {
 			width: 300px;
 		}
-		.button {
+		.buttons {
 			min-width: none;
+			max-width: 300px;
 			padding: 0 0 0.4em;
+			a {
+				min-width: 0;
+				max-width: 280px;
+				padding: 0;
+			}
+		}
+		footer li {
+			padding: 0.5em !important;
+		}
+		footer {
+			max-width: 300px;
 		}
 
 	}
