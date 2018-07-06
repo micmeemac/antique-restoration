@@ -1,1 +1,230 @@
-$(document).ready(function(){new Swiper(".swiper-container",{speed:1e3,autoplay:6200,effect:"slide",pagination:".swiper-pagination",nextButton:".swiper-button-next",prevButton:".swiper-button-prev",scrollbar:".swiper-scrollbar"}),new Swiper(".swiper-container2",{slidesPerView:4,paginationClickable:!0,spaceBetween:30,freeMode:!0,grabCursor:!0,pagination:".swiper-pagination2",nextButton:".swiper-button-next2",prevButton:".swiper-button-prev2",breakpoints:{380:{slidesPerView:1,spaceBetween:10},780:{slidesPerView:2,spaceBetween:20},1500:{slidesPerView:3,spaceBetween:20}}}),new Swiper(".swiper-container3",{slidesPerView:4,paginationClickable:!0,spaceBetween:30,freeMode:!0,grabCursor:!0,pagination:".swiper-pagination3",nextButton:".swiper-button-next3",prevButton:".swiper-button-prev3",breakpoints:{380:{slidesPerView:1,spaceBetween:10},780:{slidesPerView:2,spaceBetween:20},1500:{slidesPerView:3,spaceBetween:20}}})});var i,acc=document.getElementsByClassName("accordion");for(i=0;i<acc.length;i++)acc[i].onclick=function(){this.classList.toggle("active");var e=this.nextElementSibling;"block"===e.style.display?e.style.display="none":e.style.display="block"};!function(e){skel.breakpoints({wide:"(max-width: 1680px)",normal:"(max-width: 1280px)",narrow:"(max-width: 980px)",narrower:"(max-width: 840px)",mobile:"(max-width: 736px)"}),e(function(){var n=e(window),a=e("body"),i=e("#header"),s=e("#banner");a.addClass("is-loading"),n.on("load",function(){a.removeClass("is-loading")}),skel.vars.IEVersion<9&&e(":last-child").addClass("last-child"),e("form").placeholder(),skel.on("+narrower -narrower",function(){e.prioritize(".important\\28 narrower\\29",skel.breakpoint("narrower").active)}),e(".scrolly").scrolly({speed:1e3,offset:-10}),e("#nav > ul").dropotron({mode:"fade",noOpenerFade:!0,expandMode:skel.vars.mobile?"click":"hover"}),e('<div id="navButton"><a href="#navPanel" class="toggle"></a></div>').appendTo(a),e('<div id="navPanel"><nav>'+e("#nav").navList()+"</nav></div>").appendTo(a).panel({delay:500,hideOnClick:!0,hideOnSwipe:!0,resetScroll:!0,resetForms:!0,side:"left",target:a,visibleClass:"navPanel-visible"}),"wp"==skel.vars.os&&skel.vars.osVersion<10&&e("#navButton, #navPanel, #page-wrapper").css("transition","none"),!skel.vars.mobile&&i.hasClass("alt")&&s.length>0&&n.on("load",function(){s.scrollwatch({delay:0,range:1,anchor:"top",on:function(){i.addClass("alt reveal")},off:function(){i.removeClass("alt")}})})})}(jQuery);
+/*
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// = require jquery.min.js
+// = require jquery.dropotron.min.js
+// = require jquery.scrollgress.min.js
+// = require jquery.scrolly.min.js
+// = require skel.min.js
+// = require util.js
+// = require swiper.jquery.min.js
+
+
+// slider init
+$(document).ready(function () {
+	var mySwiper = new Swiper ('.swiper-container', {
+		speed: 1000,
+		autoplay: 6200,
+		effect: 'slide',
+
+		// If we need pagination
+		pagination: '.swiper-pagination',
+
+		// Navigation arrows
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+
+		// And if we need scrollbar
+		scrollbar: '.swiper-scrollbar',
+	})
+
+	var swiper = new Swiper('.swiper-container2', {
+			slidesPerView: 4,
+			paginationClickable: true,
+			spaceBetween: 30,
+			freeMode: true,
+			grabCursor: true,
+			// If we need pagination
+			pagination: '.swiper-pagination2',
+
+			// Navigation arrows
+			nextButton: '.swiper-button-next2',
+			prevButton: '.swiper-button-prev2',
+
+			breakpoints: {
+				// when window width is <= 320px
+				380: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				},
+				// when window width is <= 480px
+				780: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				// when window width is <= 640px
+				1500: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				}
+			}
+	})
+
+	var swiper3 = new Swiper('.swiper-container3', {
+			slidesPerView: 4,
+			paginationClickable: true,
+			spaceBetween: 30,
+			freeMode: true,
+			grabCursor: true,
+			// If we need pagination
+			pagination: '.swiper-pagination3',
+
+			// Navigation arrows
+			nextButton: '.swiper-button-next3',
+			prevButton: '.swiper-button-prev3',
+
+			breakpoints: {
+				// when window width is <= 320px
+				380: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				},
+				// when window width is <= 480px
+				780: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				// when window width is <= 640px
+				1500: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				}
+			}
+	})
+
+});
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+
+(function($) {
+
+	skel.breakpoints({
+		wide: '(max-width: 1680px)',
+		normal: '(max-width: 1280px)',
+		narrow: '(max-width: 980px)',
+		narrower: '(max-width: 840px)',
+		mobile: '(max-width: 736px)'
+	});
+
+	$(function() {
+
+		var	$window = $(window),
+			$body = $('body'),
+			$header = $('#header'),
+			$banner = $('#banner');
+
+		// Disable animations/transitions until the page has loaded.
+			$body.addClass('is-loading');
+
+			$window.on('load', function() {
+				$body.removeClass('is-loading');
+			});
+
+		// CSS polyfills (IE<9).
+			if (skel.vars.IEVersion < 9)
+				$(':last-child').addClass('last-child');
+
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
+
+		// Prioritize "important" elements on narrower.
+			skel.on('+narrower -narrower', function() {
+				$.prioritize(
+					'.important\\28 narrower\\29',
+					skel.breakpoint('narrower').active
+				);
+			});
+
+		// Scrolly links.
+			$('.scrolly').scrolly({
+				speed: 1000,
+				offset: -10
+			});
+
+		// Dropdowns.
+			$('#nav > ul').dropotron({
+				mode: 'fade',
+				noOpenerFade: true,
+				expandMode: (skel.vars.mobile ? 'click' : 'hover')
+			});
+
+		// Off-Canvas Navigation.
+
+			// Navigation Button.
+				$(
+					'<div id="navButton">' +
+						'<a href="#navPanel" class="toggle"></a>' +
+					'</div>'
+				)
+					.appendTo($body);
+
+			// Navigation Panel.
+				$(
+					'<div id="navPanel">' +
+						'<nav>' +
+							$('#nav').navList() +
+						'</nav>' +
+					'</div>'
+				)
+					.appendTo($body)
+					.panel({
+						delay: 500,
+						hideOnClick: true,
+						hideOnSwipe: true,
+						resetScroll: true,
+						resetForms: true,
+						side: 'left',
+						target: $body,
+						visibleClass: 'navPanel-visible'
+					});
+
+			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
+				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
+					$('#navButton, #navPanel, #page-wrapper')
+						.css('transition', 'none');
+
+		// Header.
+		// If the header is using "alt" styling and #banner is present, use scrollwatch
+		// to revert it back to normal styling once the user scrolls past the banner.
+		// Note: This is disabled on mobile devices.
+			if (!skel.vars.mobile
+			&&	$header.hasClass('alt')
+			&&	$banner.length > 0) {
+
+				$window.on('load', function() {
+
+					$banner.scrollwatch({
+						delay:		0,
+						range:		1,
+						anchor:		'top',
+						on:			function() { $header.addClass('alt reveal'); },
+						off:		function() { $header.removeClass('alt'); }
+					});
+
+				});
+
+			}
+
+	});
+
+})(jQuery);
