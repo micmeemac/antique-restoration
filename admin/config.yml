@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: TimothyMostert/antique-restoration
+  repo: micmeemac/antique-restoration
 
 media_folder: media_folder
 
